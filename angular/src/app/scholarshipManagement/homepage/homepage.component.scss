@@ -1,0 +1,114 @@
+.user1 {
+    width: 380px;
+    background-color: aliceblue;
+    height: 146px;
+    float: left;
+    padding: 5px 0 0 10px;
+    overflow: hidden;
+}
+
+.user2 {
+    width: 360px;
+    height: 146px;
+    float: left;
+    padding: 5px 0 0 10px;
+    overflow: hidden;
+    margin-left: 15px;
+    background-color: antiquewhite;
+}
+
+.user3 {
+    width: 370px;
+    height: 146px;
+    float: left;
+    padding: 5px 0 0 10px;
+    overflow: hidden;
+    margin-left: 15px;
+    background-color: azure;
+}
+
+.moreInfo {
+    margin-top: 2px;
+    float: right;
+    color: red;
+    margin-top: 16px;
+}
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 750px;
+        margin: 0.75rem auto;
+    }
+  }
+  :host ::ng-deep .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 1rem;
+  }
+
+  :host ::ng-deep  .modal-header .close {
+    /* padding: 1rem 1rem; */
+    margin: 0px;
+    padding: 0px;
+    margin-left: 335px;
+    color: #140cef;
+    margin-top: -7%;
+    /* margin: -28px 18rem -1rem auto; */
+}
+:host ::ng-deep   .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    pointer-events: auto;
+    max-height: 605px;
+    overflow: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+:host ::ng-deep   .modal-title {
+    // margin-bottom: 0;
+    line-height: 1.5;
+    margin-right: auto;
+    /* margin: 0px; */
+    font-size: 22px;
+    font-weight: normal;
+}
+.modalTitle{
+    line-height: 0.5;
+    margin-right: 113px;
+}
+
+:host ::ng-deep .modal-header {
+    /* align-items: flex-start; */
+    background-color: #d4466e;
+    color: white;
+    height: 40px;
+    padding: 8px;
+    width: 750px;
+    /* padding: 1rem 1rem; */
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(.3rem - 1px);
+    border-top-right-radius: calc(.3rem - 1px);
+    justify-content: left;
+    align-items: center;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  .imggrid::after{
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  
+  

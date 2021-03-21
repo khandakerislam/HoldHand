@@ -1,0 +1,14 @@
+<div class="container" id="conts">
+    <div class="row">
+        <mat-select class="form-control" single placeholder="Select year"
+        [(ngModel)]="year" (selectionChange)="selectyear()">
+          <mat-option *ngFor="let s of yearList" [value]="s.year">{{s.year}}</mat-option>
+        </mat-select>
+    </div>
+    <div class="row" style="margin-top: 2em;">
+        <div *ngFor="let i of studentList" style="margin-bottom: 1em;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;">
+           <span>Name: {{i.name}}</span> <br>
+           <span>Login Id: {{i.loginid}}</span><br><br>
+        </div>
+    </div>
+</div>

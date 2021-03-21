@@ -1,0 +1,137 @@
+ <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-brand"> Scholarship</div>
+  
+    <ul class="navbar-nav">
+        
+    </ul>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="navbar-nav nav navbar-collapse justify-content-end">
+
+       <!-- <li><a  routerLink="/contactus"  class="nav-link">Contact Us</a></li>
+        <li><a  routerLink="/faq" class="nav-link">FAQ</a></li>
+        <li><a  routerLink="/homepage" class="nav-link">Scholarship Holder</a></li>
+        <li><a  routerLink="/login" class="nav-link">Donars</a></li>
+        <li><a  routerLink="/login" class="nav-link">Login</a></li>
+        <li><a  routerLink="/logout" class="nav-link">Register</a></li>
+        <li><a  routerLink="/contactus"  class="nav-link">hhhhhhhs</a></li>-->
+       
+          <li [ngClass]="checkActive('link')" (click)="setActive('link')">
+            <a href="https://www.holdhand.org/" class="nav-link" target="_blank">Previous Website</a>
+          </li>
+          <li [ngClass]="checkActive('contactus')" (click)="setActive('contactus')">
+            <a routerLink="/contactus" class="nav-link">Contact Us</a>
+          </li>
+          <li [ngClass]="checkActive('faq')" (click)="setActive('faq')">
+            <a  routerLink="/faq" class="nav-link">FAQ</a>
+          </li>
+          <li *ngIf="!commonService.login" [ngClass]="checkActive('student')" (click)="setActive('student');sendData('STUDENT')">
+            <a  routerLink="/scholarshipHolder" class="nav-link" >Scholarship Holder</a>
+          </li>
+          <li *ngIf="!commonService.login" [ngClass]="checkActive('DONORLIST')" (click)="setActive('DONORLIST');sendData('DonDONORLISTor')">
+            <a class="nav-link" #donor>Donors</a>
+          </li>
+          <li *ngIf="commonService.login" [ngClass]="checkActive('profile')" (click)="setActive('profile');sendData('PROFILE')">
+            <a  class="nav-link">Profile</a>
+          </li>
+          <li *ngIf="commonService.superlogin" [ngClass]="checkActive('AdminList')" (click)="setActive('AdminList');sendData('AdminList')">
+            <a  routerLink="/superAdmin" class="nav-link">Admin List</a>
+          </li>
+
+          
+          
+          <li *ngIf="!commonService.login" [ngClass]="checkActive('STUDENTLIST')" (click)="setActive('STUDENTLIST');sendData('STUDENTLIST')">
+            <a class="nav-link">Student List</a>
+          </li>
+          <li *ngIf="!commonService.login" [ngClass]="checkActive('login')" (click)="setActive('login')">
+            <a  routerLink="/login" class="nav-link">Login</a>
+          </li>
+          <!-- <li *ngIf="!commonService.login" [ngClass]="checkActive('register')" (click)="setActive('register');sendData('ADMIN')">
+            <a class="nav-link" #admin>Register</a>
+          </li> -->
+          <li [ngClass]="checkActive('donate')" (click)="setActive('donate')">
+            <a  routerLink="/donate" class="nav-link">Donate</a>
+          </li>
+          <li *ngIf="commonService.login"  (click)="setActive('logout')">
+            <a  routerLink="/logout" class="nav-link">Logout</a>
+          </li>
+
+      </ul>
+    </div>
+  </nav> 
+
+
+
+
+  <div class="main-wrapper">
+    <header class="header">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span class="icon-bar">
+                            <img src="assets/images/logo.jpg" alt="">
+                          </span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+  
+                      <!-- Logo -->
+                      <a class="navbar-brand text-brand headerFont" href="index.html">
+                        <img src="assets/images/logo.png" alt="logo" class="logo">
+                      </a>
+                   </div><!-- / .navbar-header -->
+  
+                  <!-- Navbar Links -->
+                  <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li [ngClass]="checkActive('link')" (click)="setActive('link')">
+                          <a href="https://www.holdhand.org/" class="nav-link" target="_blank">Previous Website</a>
+                        </li>
+                        <li *ngIf="!commonService.login" [ngClass]="checkActive('contactus')" (click)="setActive('contactus')">
+                          <a routerLink="/contactus" class="nav-link">Contact Us</a>
+                        </li>
+                        <li [ngClass]="checkActive('faq')" (click)="setActive('faq')">
+                          <a  routerLink="/faq" class="nav-link">FAQ</a>
+                        </li>
+                        <!-- <li *ngIf="!commonService.login" [ngClass]="checkActive('student')" (click)="setActive('student');sendData('STUDENT')">
+                          <a  routerLink="/scholarshipHolder" class="nav-link" >Scholarship Holder</a>
+                        </li> -->
+                        <li *ngIf="!commonService.login" [ngClass]="checkActive('DONORLIST')" (click)="setActive('DONORLIST');sendData('DONORLIST')">
+                          <a class="nav-link" #donor>Donors</a>
+                        </li>
+                        <li *ngIf="commonService.login" [ngClass]="checkActive('profile')" (click)="setActive('profile');sendData('PROFILE')">
+                          <a  class="nav-link">Profile</a>
+                        </li>
+                        <li *ngIf="commonService.superlogin" [ngClass]="checkActive('AdminList')" (click)="setActive('AdminList');sendData('AdminList')">
+                          <a  routerLink="/superAdmin" class="nav-link">Admin List</a>
+                        </li>
+
+                        <li *ngIf="commonService.superlogin" [ngClass]="checkActive('addUser')" (click)="setActive('addUser');sendData('adduser')">
+                          <a  routerLink="/addUser" class="nav-link">Add User</a>
+                        </li>
+
+                        <li *ngIf="!commonService.login" [ngClass]="checkActive('STUDENTLIST')" (click)="setActive('STUDENTLIST');sendData('STUDENTLIST')">
+                          <a class="nav-link">Scholarship Holder</a>
+                        </li>
+                        <li *ngIf="!commonService.login" [ngClass]="checkActive('login')" (click)="setActive('login')">
+                          <a  routerLink="/login" class="nav-link">Login</a>
+                        </li>
+                        <!-- <li *ngIf="!commonService.login" [ngClass]="checkActive('register')" (click)="setActive('register');sendData('ADMIN')">
+                          <a class="nav-link" #admin>Register</a>
+                        </li> -->
+                        <li *ngIf="commonService.superlogin" [ngClass]="checkActive('donate')" (click)="setActive('donate')">
+                          <a  routerLink="/donate" class="nav-link">Donate</a>
+                        </li>
+                        <li *ngIf="commonService.login"  (click)="setActive('logout')">
+                          <a  routerLink="/logout" class="nav-link">Logout</a>
+                        </li>
+
+                      </ul>
+                  </div>
+            </div>
+            l
+      </nav>
+    </header>
+  
+  </div>
+  

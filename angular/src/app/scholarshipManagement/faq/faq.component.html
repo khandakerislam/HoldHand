@@ -1,0 +1,37 @@
+<div class="container" *ngIf="showAdmin" id="conts">
+    <div style="float: right;margin-top: -12%;color: brown">
+        {{loginDetails}}
+    </div>
+    <div class="row msg" *ngIf="msg">
+        <span class="msg">{{message}}</span>
+    </div>
+    <div class="row col-sm-12">
+        <div *ngFor="let i of faqList" class=faqBox>
+            <span>
+                <h2 class="requiredMark">Question</h2>
+                <input type="text" [(ngModel)]="i.faqsQues" class="inputBox">
+            </span>
+            <span>
+                <h2 class="requiredMark">Answer</h2>
+                <textarea class="inputBox" id="answer{{i}}" [(ngModel)]="i.faqsAns"></textarea>
+            </span>
+        </div>
+        <div>
+            <span>
+                <i class="pi pi-plus-circle" (click)="add()"></i>
+            </span>
+            <span>
+                <button type="submit" class="btn btn-success btnSubmit" 
+                [disabled]="faqList[0].faqsQues == '' && faqList[0].faqsAns == ''" (click)="onSubmit()">
+                    Submit</button>
+
+            </span>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="!showAdmin" style="box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.1) inset;" id="conts">
+    <div *ngFor="let i of faq">
+        <span><b>Question : </b>{{i.faqsQues}}</span><br>
+        <span><b>Answer : </b>{{i.faqsAns}}</span><br><br>
+    </div>
+</div>

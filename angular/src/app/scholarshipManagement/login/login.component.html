@@ -1,0 +1,36 @@
+<div class="main-wrapper">
+	<main class="main">
+        <section class="home-banner">
+            <div class="container" id="cont">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 col-md-offset-3">
+                        <div class="client-form">
+							<div class="row msg" *ngIf="msg">
+								<span class="msg">{{message}}</span>
+							</div>
+                        	<form [formGroup]="loginForm" class="registerForm">
+                        		<div class="form-group">
+                        			<label for="email" class="requiredMark">User Id</label>
+                        			<input type="email" name="email" id="email" class="form-control" placeholder="User Id" formControlName="loginid">
+                        		</div>
+                        		<div class="form-group">
+                        			<label for="password" class="requiredMark">Password</label>
+                        			<input type="password" name="password" id="password" class="form-control" placeholder="Your Password" formControlName="password">
+								</div>
+								<div class="form-group">
+                        			<label for="email" class="requiredMark">Login As Role</label>
+									  <mat-select formControlName="role" class="form-control" >
+										<mat-option *ngFor="let role of roles" [value]="role.value">{{role.label}}</mat-option>
+									  </mat-select>
+                        		</div>
+                        		<div class="form-group">
+                        			<div class="text-center"><button mat-button color="accent" class="btn loginBtn" [disabled]="!loginForm.valid || submit" (click)="onSubmit()">Login</button></div>
+                        		</div>
+                        	</form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+	</main>
+</div>

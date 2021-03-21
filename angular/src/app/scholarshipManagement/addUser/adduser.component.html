@@ -1,0 +1,64 @@
+<div class="container" id="conts">
+         <form class="form-horizontal" role="form" [formGroup]="registerForm">
+            <aside class="profile-info col-lg-9">
+                <div class="row msg" *ngIf="msg">
+                    <span class="msg">{{message}}</span>
+                </div>
+         
+             
+              <div class="form-group">
+                 <label  class="col-lg-3 control-label requiredMark">Login Id</label>
+                 <div class="col-lg-6">
+                     <input type="text" class="form-control" id="loginid" placeholder="Login Id" formControlName="loginid" [readonly]="submit">
+                 </div>
+             </div>
+             
+             <div class="form-group">
+                 <label  class="col-lg-3 control-label requiredMark">Password</label>
+                 <div class="col-lg-6">
+                     <input type="password" class="form-control" id="password" placeholder="Password" formControlName="password" [readonly]="submit">
+                 </div>
+             </div>
+             
+         
+             <div class="form-group">
+                <label for="email" class="col-lg-3 control-label">User Role</label>
+                <div class="col-lg-6">
+                  <mat-select formControlName="role" class="form-control" >
+                    <mat-option *ngFor="let role of roles" [value]="role.value">{{role.value}}</mat-option>
+                  </mat-select>
+            </div>
+        </div>
+             
+             <!-- <div class="form-group last">
+                     <label class="control-label col-lg-2">Image Upload</label>
+                     <div class="col-lg-6">
+                         <div class="fileupload fileupload-new" data-provides="fileupload">
+                             <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                                 <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+                             </div>
+                             <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                             <div>
+                              <span class="btn btn-white btn-file">
+                              <span class="fileupload-new"><i class="icon-paper-clip"></i> Select image</span>
+                              <span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+                              <input type="file" class="default" />
+                              </span>
+                                 <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Remove</a>
+                             </div>
+                         </div>
+                         
+                     </div>
+                 </div>
+              -->
+
+              <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn btn-success btnSubmit" [disabled]="!registerForm.valid || submit" (click)="onSubmit()">Submit</button>
+                    <button type="button" class="btn btn-default btnCancel" (click)="cancel()">Cancel</button>
+                </div>
+            </div>
+            </aside>
+            
+         </form>
+</div>

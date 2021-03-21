@@ -1,0 +1,35 @@
+spring.datasource.url = jdbc:mysql://localhost:3306/scholarshipservice?useSSL=false
+spring.datasource.username = root
+spring.datasource.password = root
+server.port = 8080
+spring.application.name=ScholarshipService
+#logging
+logging.level.org.hibernate = ERROR
+# Allows Hibernate to generate SQL optimized for a particular DBMS
+#spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+
+# databse url setup
+spring.jpa.show-sql = true
+spring.jpa.generate-ddl = true
+spring.jpa.hibernate.ddl-auto = update
+spring.jpa.open-in-view=false
+
+spring.datasource.tomcat.max-wait=20000
+spring.datasource.tomcat.max-active=50
+spring.datasource.tomcat.max-idle=20
+spring.datasource.tomcat.min-idle=15
+
+
+########Files Size Configuration upto 25MB########
+spring.servlet.multipart.max-file-size =25MB
+spring.servlet.multipart.max-request-size=25MB
+
+## MULTIPART (MultipartProperties)
+# Enable multipart uploads
+spring.servlet.multipart.enabled=true
+# Threshold after which files are written to disk.
+spring.servlet.multipart.file-size-threshold=2KB
+
+server.servlet.context-path=/ScholarshipService
+
+Contactus=D:/Conatct.html;

@@ -1,0 +1,21 @@
+.data{
+    color: #d85220;
+    text-align: center;
+    margin-top: 1%;
+}
+a:hover {
+    color: #f44336;
+    text-decoration: underline;
+    cursor: pointer;
+}
+a {
+    color: #f44336;
+}
+
+#conts{
+    border: 1px solid #f44336;
+    width: 100%;
+    padding: 2%;
+    border-radius: 11px;
+    background-color: whitesmoke;
+}

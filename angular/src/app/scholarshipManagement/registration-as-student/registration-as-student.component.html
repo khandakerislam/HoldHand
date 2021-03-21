@@ -1,0 +1,182 @@
+<div class="container" id="conts">
+    <form class="form-horizontal" role="form" [formGroup]="registerForm">
+        <aside class="profile-info col-lg-9">
+            <div class="row msg" *ngIf="msg">
+                <span class="msg">{{message}}</span>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Full Name</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="f-name" placeholder="Full Name" formControlName="name"
+                        [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Nick Name</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="l-name" placeholder="Nick Name"
+                        formControlName="nickName" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Login Id</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="loginid" placeholder="Login Id"
+                        formControlName="loginid" [readonly]="submit" disabled>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Password</label>
+                <div class="col-lg-6">
+                    <input type="password" class="form-control" id="password" placeholder="Password"
+                        formControlName="password" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Contact Number</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="mobile" placeholder="Contact Number"
+                        formControlName="contactNumber" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Father's Name</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="fName" placeholder="Father's Name"
+                        formControlName="fatherName" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Proffesion</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="email" placeholder="Proffesion "
+                        formControlName="fatherProfession" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Parent Contact Number</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="mobile1" placeholder="Contact Number"
+                        formControlName="parentPhone" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Mother's Name</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="motherName" placeholder="Mother's Name"
+                        formControlName="motherName" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Profession</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="profession" placeholder="Profession"
+                        formControlName="motherProfession" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Mailing Address</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="mailingadd" placeholder="Mailing Address"
+                        formControlName="mailingAddress" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Permanent Address</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="perAdd" placeholder="Permanent Address"
+                        formControlName="permanentAddress" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Institution</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="insti" placeholder="Institution"
+                        formControlName="institutionName" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Institution Address</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="instAdd" placeholder="Institution"
+                        formControlName="institutionAddress" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label requiredMark">Faculty</label>
+                <div class="col-lg-6">
+                    <input type="text" class="form-control" id="faculty" placeholder="Faculty"
+                        formControlName="facultyName" [readonly]="submit">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Sponser's Name</label>
+                <div class="col-lg-6">
+                    <mat-select formControlName="sponserName" class="form-control"
+                     placeholder="Select Sponsers"
+                        [(ngModel)]="spnserName" [ngModelOptions]="{standalone: true}">
+                        <mat-option *ngFor="let s of sponserList" [value]="s.userId">{{s.name}}</mat-option>
+                    </mat-select>
+                </div>
+            </div>
+            <!-- <div class="form-group last">
+                <label class="control-label col-lg-2">Image Upload</label>
+                <div class="col-lg-6">
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                        <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                            <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" />
+                        </div>
+                        <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                        <div>
+                         <span class="btn btn-white btn-file">
+                         <span class="fileupload-new"><i class="icon-paper-clip"></i> Select image</span>
+                         <span class="fileupload-exists"><i class="icon-undo"></i> Change</span>
+                         <input type="file" class="default" />
+                         </span>
+                            <a href="#" class="btn btn-danger fileupload-exists" data-dismiss="fileupload"><i class="icon-trash"></i> Remove</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+         -->
+
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" class="btn mat-button btn-success btnSubmit"
+                        [disabled]="!registerForm.valid || submit" (click)="onSubmit()">Submit</button>
+                    <button type="button" class="btn mat-button btn-default btnCancel"
+                        (click)="cancel()">Cancel</button>
+                </div>
+            </div>
+        </aside>
+        <aside class="profile-nav col-lg-3">
+            <div class="col-md-6">
+
+                <!-- Form starts -->
+                <div class="group-gap">
+
+                    <!-- Upload image -->
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <!-- <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" #fileInput
+                                (change)="uploadFile($event)" /> -->
+                                <input type="file" text='Browse Files'
+                                 (change)="uploadFile($event)"
+                                accept=".png ,.jpeg,.jpg " id="file-logo">
+                        </div>
+                        <div class="preview">
+                            <div id="imagePreview" [style.backgroundImage]="'url('+ imageUrl +')'"></div>
+                            <img id="myimage" [src]='thumbnail' style="width: 235px; height: 235px;"/>
+                        </div>
+                        <!-- Submit Button -->
+                        <!-- <button type="submit" class="btn btnSubmit" 
+                        (click)="imageSubmit()">Upload Image</button> -->
+        
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </form>
+</div>

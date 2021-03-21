@@ -1,0 +1,72 @@
+#cont{
+    margin-top: 5%;
+}
+
+#conts{
+    border: 1px solid #f44336;
+    width: 95%;
+    padding: 2%;
+    border-radius: 11px;
+    background-color: whitesmoke;
+}
+.btnSubmit{
+    display: inline-block;
+    border: none;
+    min-width: 156px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background:#ec8862;
+    color: #fff !important;
+    line-height: normal;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    }
+    .btnCancel {
+        margin: 45px;
+        display: inline-block;
+        border: 1px solid#ec8862;
+        min-width: 156px;
+        font-size: 16px;
+        padding: 10px 20px;
+        background: #fff !important;
+        color: #ec8862 !important;
+        line-height: normal;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 15px;
+    }
+.msg{
+    background-color: lightgreen;
+    margin: 2px;
+    padding: 4px;
+}
+.locationDiv{
+        padding-top: 2.6%;
+        padding-left: 5%;
+    
+}
+.heading{
+    font-family: "Open Sans", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222;
+    font-size:18px !important;
+}
+.information{
+    font-family: "Open Sans", Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222;
+    font-size:18px !important;
+}
+.info {
+    background: #ececec !important;
+}
+
+.requiredMark:after {
+    content: "*";
+    color: #ff0000;
+}

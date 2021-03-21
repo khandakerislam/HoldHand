@@ -1,0 +1,11 @@
+angular/dist/
+java/.idea
+java/mvn
+java/log/
+java/target/
+java/.classpath
+java/.project
+java/HELP.md
+java/*.png
+java/mvn*
+java/ScholarshipService.iml

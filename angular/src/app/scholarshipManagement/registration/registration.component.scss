@@ -1,0 +1,66 @@
+#cont{
+    margin-top:10%;
+    margin-bottom:10%;
+
+}
+:host ::ng-deep .form-horizontal .control-label {
+    padding-top: 7px;
+    margin-bottom: 0;
+    text-align: left;
+}
+.btnSubmit{
+    margin:12px;
+    display: inline-block;
+    border: none;
+    min-width: 156px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background:#ec8862;
+    color: #fff !important;
+    line-height: normal;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 15px;
+    }
+    .btnCancel{
+        margin: 12px;
+        display: inline-block;
+        border: 1px solid#ec8862;
+        min-width: 156px;
+        font-size: 16px;
+        padding: 10px 20px;
+        background: #fff !important;
+        color: #ec8862 !important;
+        line-height: normal;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .msg{
+        background-color: lightgreen;
+        margin: 2px;
+        padding: 4px;
+        width: 65%;
+        margin-bottom: 1em;
+    }
+
+    .preview {
+        margin-top: 1em;
+        width: 400px;
+    }
+
+    #conts{
+        border: 1px solid #f44336;
+        width: 100%;
+        padding: 2%;
+        border-radius: 11px;
+        background-color: whitesmoke;
+    }
+
+    .requiredMark:after {
+        content: "*";
+        color: #ff0000;
+    }
